@@ -1,0 +1,134 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+
+    tools:context="com.android.attendance.activity.MainActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textColor="#000"
+        android:text="Select department"
+        android:textSize="20dp"
+        android:textStyle="bold"
+         />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner1"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@+id/spinner1"
+        android:textColor="#000"
+        android:text="Select Year"
+        android:textSize="20dp"
+        android:textStyle="bold"
+         />
+
+    <Spinner
+        android:id="@+id/spinnerSE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinneryear"
+        android:layout_alignLeft="@+id/spinneryear"
+
+        android:layout_marginTop="8dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Course"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/spinneryear"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:layout_alignLeft="@+id/spinner1"
+        android:layout_below="@+id/spinner1" />
+    <ImageButton
+        android:id="@+id/DateImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerSE"
+        android:layout_alignLeft="@+id/spinnerSE"
+
+        android:layout_marginTop="8dp"
+        android:cropToPadding="true"
+        android:src="@drawable/calendar_icon" />
+
+
+    <EditText
+        android:id="@+id/DateEditText"
+        android:layout_width="388dp"
+        android:layout_height="46dp"
+        android:layout_alignTop="@+id/DateImageButton"
+        android:layout_marginTop="8dp"
+
+        android:layout_toLeftOf="@+id/spinnerSE"
+        android:background="#ffffff"
+        android:editable="false"
+        android:ems="10">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/buttonsubmit"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/DateImageButton"
+        android:textColor="#000"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/roundedbutton"
+        android:text="Add Attendance" />
+
+    <Button
+        android:id="@+id/viewTotalAttendanceButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:textColor="#000"
+        android:background="@drawable/roundedbutton"
+        android:text="View Total Attendance" />
+
+    <Button
+        android:id="@+id/viewAttendancebutton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="393dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_below="@+id/buttonsubmit"
+        android:layout_marginTop="8dp"
+        android:textColor="#000"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/roundedbutton"
+        android:text="View Attendance" />
+
+</LinearLayout>
